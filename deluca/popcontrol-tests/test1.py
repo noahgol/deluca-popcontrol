@@ -8,6 +8,7 @@ from _gpc import GPC, quad_loss
 # Define system dynamics matrices
 A = jnp.array([[1.0, 0.1], [0, 1.0]])
 B = jnp.array([[0], [0.1]])
+K = jnp.array([[1.0, 1.0]])
 
 # Define cost matrices
 Q = jnp.array([[1.0, 0], [0, 1.0]])
@@ -17,7 +18,7 @@ R = jnp.array([[1.0]])
 initial_state = jnp.array([[0], [0]])
 
 # Initialize GPC agent
-gpc_agent = GPC(A=A, B=B, Q=Q, R=R)
+gpc_agent = GPC(A=A, B=B, Q=Q, R=R, K=K)
 
 # Define a random key for JAX's random functions
 key = jax.random.PRNGKey(0)

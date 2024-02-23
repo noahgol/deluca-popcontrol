@@ -27,7 +27,7 @@ import pickle
 import flax
 import jax
 
-import deluca
+# import deluca
 
 
 def save(obj, path):
@@ -133,10 +133,11 @@ class Agent(Obj):
   def init(self):
     return AgentState()
 
-
+'''
 deluca.field = field
 deluca.Obj = Obj
 deluca.Env = Env
 deluca.Agent = Agent
 deluca.save = save
 deluca.load = load
+'''
