@@ -2,7 +2,7 @@ import jax
 import jax.numpy as jnp
 import sys
 
-sys.path.append('/Users/ngolowich/Documents/mit/rl/population-control/popcontrol-code/deluca/agents')
+sys.path.append('../agents')
 from _gpc import GPC, quad_loss
 
 # Define system dynamics matrices
