@@ -121,7 +121,7 @@ class GPC(Agent):
                 """Evolve function"""
                 return self.A @ state + self.B @ action(state, h) + w[h + H], None
 
-            final_state, _ = jax.lax.scan(evolve, np.zeros((d_state, 1)), np.arange(H - 1))
+            final_state, _ = jax.lax.scan(evolve, np.zeros((d_state, 1)), np.arange(HH))
             return cost_fn(final_state, action(final_state, HH - 1))
 
         self.policy_loss = policy_loss
